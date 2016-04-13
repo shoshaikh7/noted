@@ -1,0 +1,4 @@
+- @notes.each do |note|
+  %a{ href: (url_for [note])}
+    %h2= note.title
+    %p= note.content
