@@ -1,5 +1,5 @@
-%h1= @note.title
-%p1= @note.content
+%h1.title= @note.title
+%p1.content= simple_format(@note.content)
 %br
 
 = link_to "Edit Note", edit_note_path

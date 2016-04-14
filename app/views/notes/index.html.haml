@@ -1,4 +1,8 @@
 - @notes.each do |note|
   %a{ href: (url_for [note])}
-    %h2= note.title
-    %p= note.content
+    %p.title= note.title
+    %p.date= time_ago_in_words(note.created_at)
+
+- if @notes.blank?
+  %h2 Add some notes!
+  %p It appears you have not created any notes yet... Let's change that!
