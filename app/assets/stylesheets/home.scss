@@ -1,0 +1,77 @@
+/* BANNER */
+#banner {
+  width: 100%;
+	min-height: 500px;
+  background-image: url(image_path("sticky-note_1920_1080.jpg"));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+  #banner-text {
+    width: 20em;
+    padding: 5em;
+    h1, h2 {
+      margin: 0;
+    }
+    h1 {
+      color: $primary;
+      font-size: 4em;
+      font-weight: 600;
+    }
+    h2 {
+      color: $cloud;
+      font-size: 3em;
+    }
+    a {
+      display: block;
+      height: 1.5em;
+      width: 33%;
+      margin-top: 2em;
+      background-color: $cloud;
+      color: $primary;
+      padding-top: 0.4em;
+      border-radius: 7px;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+}
+
+/* CALLOUTS */
+#testimonial {
+  min-height: 45em;
+  text-align: center;
+  background-color: $cloud;
+  .title {
+    font-size: 2.5em;
+
+  }
+  .quote {
+    font-style: italic;
+    font-size: 2em;
+    color: $primary;
+  }
+  .name {
+    font-size: 2em;
+  }
+}
+
+/* CALLOUTS */
+#callouts {
+  width: 100%;
+  min-height: 350px;
+  background-color: rgba(#000000, 0.8);
+  padding-top: 4em;
+  display: table;
+  .callout {
+    width: 28%;
+    height: 200px;
+    padding: 1em;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: $cloud;
+    i {
+      color: $primary;
+    }
+  }
+}

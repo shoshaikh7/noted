@@ -1,1 +1,38 @@
-%h1 Home
+#banner
+  #banner-text
+    %h1
+      Noted
+    %h2
+      Never Forget A Thing.
+    %h3= link_to "Sign Up", new_user_registration_path
+
+#testimonial
+  .container-with-padding
+    %h1.title FOR ALL THE THINGS THAT SHOULDN'T HAVE FORGOTTEN.
+    %p.quote "After using Noted, I never forgot a single thing!"
+    %p.name - Sho
+    %p.quote "Best online note app, I can even use HTML with it!"
+    %p.name - Sho
+    %p.quote "It's so pretty <3"
+    %p.name - Sho
+
+#callouts
+  .container
+    .callout
+      %i.fa.fa-pencil.fa-5x{"aria-hidden" => "true"}
+      %h2 Jot Down Quick Notes
+      %p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci voluptate delectus? Eveniet nesciunt at, tenetur vel dolores fugit eaque asperiores enim facere, deserunt eos obcaecati modi error, molestiae sit.
+    .callout
+      %i.fa.fa-html5.fa-5x{"aria-hidden" => "true"}
+      %h2 Use HTML
+      %p Dolores facere rem, sapiente enim, dicta excepturi facilis! Nostrum totam, nesciunt laborum vitae at magnam, molestiae deleniti, odio debitis dolores laboriosam amet. Autem labore, maiores. Qui explicabo suscipit excepturi illum?
+    .callout
+      %i.fa.fa-list-ul.fa-5x{"aria-hidden" => "true"}
+      %h2 Make Lists
+      %p Excepturi ullam omnis enim inventore voluptatum est voluptates modi fuga, vero, ipsum, deserunt natus labore molestias, dicta qui ipsa at nesciunt quisquam nostrum. Distinctio vitae sequi, tenetur beatae facere consequuntur.
+
+%footer
+  .container
+    %p &copy; 2016 Shoaib Shaikh
+    #logo
+      = link_to image_tag("noted_logo.png").html_safe, root_path
