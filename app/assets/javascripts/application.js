@@ -16,7 +16,20 @@
 //= require_tree .
 
 $('document').ready(function() {
+  // Notice Slide Up
   setTimeout(function() {
     $('.notice').slideUp();
   }, 3000);
+
+  // Awesome Form Transitions
+  $('.simple_form .form-inputs .input-group input').focusout(function(){
+    var text_val = $(this).val();
+    if(text_val === "") {
+      $(this).removeClass('has-value');
+    }
+    else {
+      $(this).addClass('has-value');
+    }
+  })
+
 });

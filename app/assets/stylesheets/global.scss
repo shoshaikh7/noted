@@ -10,6 +10,14 @@ a, p {
   font-family: 'Karla', sans-serif;
 }
 
+a {
+color: #000;
+  text-decoration: none;
+  &:hover {
+    color: $primary;
+  }
+}
+
 /* CONTAINER */
 .container {
   width: 80%;
@@ -73,6 +81,7 @@ header {
 footer {
   width: 100%;
   height: 60px;
+  background-color: $cloud;
   p {
     display: inline-block;
     color: rgb(85, 85, 85);
@@ -85,6 +94,83 @@ footer {
     float: right;
     img {
       height: 4em;
+    }
+  }
+}
+
+
+/* FORMS */
+.form-header {
+  width: 20em;
+  margin: 2em auto;
+  border: 4px solid $primary;
+  border-radius: 6px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 5px 20px #888888;
+}
+.form-inputs {
+  width: 20em;
+  margin: 2em auto;
+  padding: 3em;
+  border: 4px solid $primary;
+  border-radius: 6px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 5px 20px #888888;
+}
+.input-group {
+  display: inline-block;
+  margin: 1em auto;
+  position: relative;
+  font-family: 'Karla', sans-serif;
+  input {
+    width: 18em;
+    border: none;
+    border-bottom: solid 2px $primary;
+    color: $primary;
+    padding: 15px 0;
+    font-size: 18px;
+    &:focus, &:active {
+      outline: none;
+    }
+    &:focus + label, &.has-value + label {
+      top: -10px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    font-style: italic;
+    font-size: 18px;
+    color: #999;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: (all 0.5s ease-in-out);
+  }
+  .user_remember_me {
+    margin: 1em;
+  }
+}
+.form-actions {
+  text-align: center;
+  margin: 1em;
+  .btn {
+    display: block;
+    margin: 1em auto;
+    background: none;
+    border: solid 4px $primary;
+    border-radius: 6px;
+    box-shadow: 5px 5px 20px #888888;
+    color: $primary;
+    padding: 15px 40px;
+    font-size: 18px;
+    &:active {
+      color: white;
+      background-color: $primary;
     }
   }
 }
