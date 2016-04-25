@@ -3,7 +3,7 @@ class NotesController < ApplicationController
   respond_to :html, :json
 
   def index
-    @notes = Note.where(user_id: current_user).order("created_at DESC")
+    @notes = Note.where(user_id: current_user).order("position")
   end
 
   def show
@@ -39,6 +39,13 @@ class NotesController < ApplicationController
     @note.destroy
     flash[:notice] = "Note Deleted, Bye Bye Note!"
     redirect_to notes_path
+  end
+
+  def sort
+    params[:note].each_with_index do |id, index|
+        Note.where(id: id).update_all(position: index+1)
+    end
+    render nothing: true
   end
 
   private

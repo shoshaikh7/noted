@@ -34,9 +34,16 @@ $(document).ready(function() {
     }
   });
 
+  // Make Notes Sortable Using jQuery-UI
   $( ".notes" ).sortable({
-    appendTo: document.body
+    cursor: 'move',
+    revert: true,
+    scroll: true,
+    update: function( event, ui ) {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+    }
   });
+
 
   // Activating Best In Place
   $(document).ready(function() {
