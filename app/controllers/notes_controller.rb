@@ -15,8 +15,10 @@ class NotesController < ApplicationController
   def create
     @note = current_user.notes.build(note_params)
     if @note.save
+      flash[:notice] = "Noted!"
       redirect_to @note
     else
+      flash[:notice] = "Title and Note required!"
       render 'new'
     end
   end
@@ -34,6 +36,7 @@ class NotesController < ApplicationController
 
   def destroy
     @note.destroy
+    flash[:notice] = "Note Deleted, Bye Bye Note!"
     redirect_to notes_path
   end
 

@@ -22,7 +22,7 @@ $('document').ready(function() {
   }, 3000);
 
   // Awesome Form Transitions
-  $('.simple_form .form-inputs .input-group input').focusout(function(){
+  $('.simple_form input, textarea').focusout(function(){
     var text_val = $(this).val();
     if(text_val === "") {
       $(this).removeClass('has-value');

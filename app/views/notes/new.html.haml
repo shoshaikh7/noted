@@ -1,3 +1,14 @@
-%h1 Add A New Note!
+-# NEW
+.container
+  .form-header
+    %h2 Add A New Note!
 
-= render "form"
+  = simple_form_for @note do |f|
+    .new-form-inputs
+      .input-group
+        = f.input_field :title, required: true, autofocus: true
+        = f.label :title, "Your Title"
+      .input-group
+        = f.input_field :content, required: true
+    .form-actions
+      = f.button :submit

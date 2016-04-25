@@ -1,3 +1,4 @@
+-# BANNER
 #banner
   #banner-text
     %h1
@@ -6,6 +7,7 @@
       Never Forget A Thing.
     %h3= link_to "Sign Up", new_user_registration_path
 
+-# TESTIMONAILS
 #testimonial
   .container-with-padding
     %h1.title FOR ALL THE THINGS THAT SHOULDN'T HAVE FORGOTTEN.
@@ -16,6 +18,7 @@
     %p.quote "It's so pretty <3"
     %p.name - Sho
 
+-# CALLOUTS
 #callouts
   .container
     .callout
@@ -30,3 +33,11 @@
       %i.fa.fa-list-ul.fa-5x{"aria-hidden" => "true"}
       %h2 Make Lists
       %p Excepturi ullam omnis enim inventore voluptatum est voluptates modi fuga, vero, ipsum, deserunt natus labore molestias, dicta qui ipsa at nesciunt quisquam nostrum. Distinctio vitae sequi, tenetur beatae facere consequuntur.
+
+
+-# FOOTER
+%footer
+  .container
+    %p &copy; 2016 Shoaib Shaikh
+    #logo
+      = link_to image_tag("noted_logo.png").html_safe, root_path
