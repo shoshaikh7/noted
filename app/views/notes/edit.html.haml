@@ -1,3 +1,13 @@
 -# EDIT
 .container
-  %h1 Edit Your Note
+  .note_edit
+    .sub-header
+      %h2 Edit your note by clicking on what you want to edit, then click away to save.
+    %h1.title= best_in_place @note, :title, :as => :input
+
+    %hr
+    .content
+      = best_in_place @note, :content, :as => :textarea, :display_with => :simple_format
+    %hr
+    = button_to "Back", note_path(@note), method: :get, class: "btn back-btn"
+    = button_to "Delete Note", note_path(@note), method: :delete, data: {confirm: "Are you sure?"}, class: "btn delete-btn"

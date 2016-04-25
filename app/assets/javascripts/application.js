@@ -12,10 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require best_in_place
 //= require turbolinks
 //= require_tree .
 
-$('document').ready(function() {
+$(document).ready(function() {
   // Notice Slide Up
   setTimeout(function() {
     $('.notice').slideUp();
@@ -32,4 +34,8 @@ $('document').ready(function() {
     }
   })
 
+  // Activating Best In Place
+  $(document).ready(function() {
+    $(".best_in_place").best_in_place();
+  });
 });

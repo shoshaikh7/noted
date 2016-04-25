@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   before_action :find_note, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :json
 
   def index
     @notes = Note.where(user_id: current_user).order("created_at DESC")
@@ -28,7 +29,7 @@ class NotesController < ApplicationController
 
   def update
     if @note.update(note_params)
-      redirect_to @note
+      respond_with @note
     else
       render 'edit'
     end

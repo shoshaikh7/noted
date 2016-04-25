@@ -2,14 +2,25 @@
 .container
   .notes
     - @notes.each do |note|
-      %a.note{ href: (url_for [note])}
-        %h3= truncate(note.title, :length => 20)
-        %h5.date= time_ago_in_words(note.created_at)
+      .note
+
+        .note-header
+          %h6.created
+            Created:
+            = note.created_at.strftime("%m-%d-%y")
+          %h6.delete-x= link_to "X", note_path(note), method: :delete, data: {confirm: "Are you sure?"}
+
+        %a.note-body{ href: (url_for [note])}
+          %h3.title= truncate(note.title, :length => 20)
+        .note-footer
+
+          %h6.updated
+            Updated:
+            = time_ago_in_words(note.updated_at)
 
     - if @notes.blank?
-      %h2 Add some notes!
-      %h3 It appears you have not created any notes yet... Let's change that!
-
+      %h2.blank-header It appears you have not created any notes yet... Let's change that!
+      = button_to "Create A New Note", new_note_path, method: :get, class: "new-btn"
 -# FOOTER
 %footer
   .container
