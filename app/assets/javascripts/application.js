@@ -32,7 +32,11 @@ $(document).ready(function() {
     else {
       $(this).addClass('has-value');
     }
-  })
+  });
+
+  $( ".notes" ).sortable({
+    appendTo: document.body
+  });
 
   // Activating Best In Place
   $(document).ready(function() {
