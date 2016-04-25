@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '785cefdfc1669e05050f184947450ecd6ceb4826ea83f9748a00ba8e26dad0e618b01f4f710ab99f525cf3ea0c0ec8df227a9a589b083cc38ac7038ec83a6b30'
+  # config.secret_key = '7673a887f5f4dac63727c94c7934ae4dc859e09f16718e22bb6e4b25cdf209238371fc9284c140847e8d6a55d365bcde128ae535bf857160bc000c0bff3a8146'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -61,7 +61,7 @@ Devise.setup do |config|
   # given strategies, for example, `config.http_authenticatable = [:database]` will
   # enable it only for database authentication. The supported strategies are:
   # :database      = Support basic authentication with authentication key + password
-  config.http_authenticatable = false
+  # config.http_authenticatable = false
 
   # If 401 status code should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
@@ -99,7 +99,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '4eb1d59bf40006e1da4ff6eb39d7d822434826556637871cdc822f8cbb756804423effee7ea9bf635b801d2b774771a7e3de2d0395858b408331ce5e122b02f8'
+  # config.pepper = '3811c5d2a737f9277c8443502cf183ef8be10ae76c12f24febb4b862b09158c0681ee39541d2e8656a3983a07296f76cf7c9aa383c944ade226b8f75d3fb1992'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
